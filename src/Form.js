@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 const Form = () => {
+  ///for updating values in input
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  ////for check validation of form
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (password === "" || confirmPassword === "" || fullname === "" || email === "") {
@@ -22,6 +24,7 @@ const Form = () => {
     }
   };
 
+  ////return the form with inputs
   return (
     <form className="form" onSubmit={handleFormSubmit}>
       <h1>Signup</h1>
